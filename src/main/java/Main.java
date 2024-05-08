@@ -26,16 +26,18 @@ class Main {
         case 1:
           System.out.println("Podaj imię studenta:");
           String name = scanner.nextLine();
+          System.out.println("Podaj nazwisko studenta:");
+          String nazw = scanner.nextLine();
           System.out.println("Podaj wiek studenta:");
           int age = scanner.nextInt();
           scanner.nextLine(); 
-          s.addStudent(new Student(name, age));
+          s.addStudent(new Student(name, nazw, age));
           System.out.println("Student dodany.");
           break;
           case 2:
           var students = s.getStudents();
           for(Student current : students) {
-            System.out.println("Imię: " + current.GetName() + ", Wiek: " + current.GetAge());
+            System.out.println("Imię: " + current.GetName() +  ", Nazwisko: " + current.GetNazw() + ", Wiek: " + current.GetAge());
           }
           break;
         default:
