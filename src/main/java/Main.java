@@ -18,10 +18,11 @@ class Main {
 
       System.out.println("Wybierz opcję:");
       System.out.println("1. Dodaj studenta");
-      int option = scanner.nextInt();
+      System.out.println("2. Wyświetl listę studentów");
+      int opcja = scanner.nextInt();
       scanner.nextLine(); 
 
-      switch(option) {
+      switch(opcja) {
         case 1:
           System.out.println("Podaj imię studenta:");
           String name = scanner.nextLine();
@@ -31,7 +32,12 @@ class Main {
           s.addStudent(new Student(name, age));
           System.out.println("Student dodany.");
           break;
-          
+          case 2:
+          var students = s.getStudents();
+          for(Student current : students) {
+            System.out.println("Imię: " + current.GetName() + ", Wiek: " + current.GetAge());
+          }
+          break;
         default:
           System.out.println("Niepoprawna opcja.");
       }
