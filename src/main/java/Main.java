@@ -39,7 +39,7 @@ class Main {
           case 2:
           var students = s.getStudents();
           for(Student current : students) {
-            System.out.println("Imię: " + current.GetName() +  ", Nazwisko: " + current.GetNazw() + ", Wiek: " + current.GetAge() + "Data urodzenia: " + current.GetData());
+            System.out.println("Imię: " + current.GetName() +  ", Nazwisko: " + current.GetNazw() + ", Wiek: " + current.GetAge() + ", Data urodzenia: " + current.GetData());
           }
           break;
         default:
